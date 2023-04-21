@@ -1,0 +1,53 @@
+.background1 {
+    background-color: #618362;
+}
+
+.Box {
+    border: solid;
+    border-radius: 20px;
+}
+
+
+.about_text1{
+    font-size: 1.3rem;
+    color: white;
+    line-height: 2;
+    font-weight: 300 !important;
+}
+
+.roadinfo {
+    padding-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 20px;
+    text-align: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white
+}
+
+.header{
+    margin-top: 10px;
+    text-align: center;
+    text-decoration-line: underline;
+    font-size: 3.5rem;
+    color: white;
+}
+
+.Name {
+    margin-top: 10px;
+    font-size: 2rem;
+    color: white;
+}
+
+.Position {
+    color: white;
+}
+
+.Description {
+    color: white;
+}
+
+.border {
+    border-radius: 20px;
+    border-width: 20px;
+    border-style: solid;
+}

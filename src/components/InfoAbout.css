@@ -1,0 +1,40 @@
+.Information {
+    background-color: #7C0000 ;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    
+
+}
+
+.Info {
+    margin-top: 40px;
+    border-style: solid;
+    border-radius: 10px;
+    height: 30vh;
+    width: 100vh;
+    color: black;
+    font-size: 1rem;
+    object-fit: contain;
+}
+
+.Desc{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.Image{
+    margin-top: 10px;
+    margin-left: 50px;
+    border-style: solid;
+    border-radius: 10px;
+    align-items: right;
+    flex-direction: row;
+    justify-content: right;
+    width: 51vh;
+    height: 42vh;
+    color: black;
+}
