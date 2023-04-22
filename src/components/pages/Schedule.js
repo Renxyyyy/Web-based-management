@@ -1,6 +1,12 @@
-import React from 'react';
-import '../../App.css';
+import React from "react";
+import "../../App.css";
+import Calendar from "../Calendar";
 
 export default function Schedule() {
-  return <h1 className='schedule'>Schedule</h1>;
+  return (
+    <>
+      <h1 className="schedule">Schedule</h1>
+      <Calendar />
+    </>
+  );
 }
