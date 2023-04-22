@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import listPlugin from "@fullcalendar/list";
 import "./Calendar.css";
 import AddScheduleModal from "./AddScheduleModal";
 import { Button } from "react-bootstrap";
 
-const events = [{ title: "Court Schedule", start: new Date() }];
-
 const Calendar = () => {
   const [showModal, setShowModal] = useState(false);
+  const calendarRef = useRef(null);
 
   const handleShowModal = () => {
     setShowModal(true);
   };
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+
+  const handleAddEvent = (event) => {
+    let calendarApi = calendarRef.current.getApi();
+    calendarApi.addEvent(event);
+    console.log(event);
   };
   return (
     <div className="calendar-wrapper">
@@ -24,20 +31,26 @@ const Calendar = () => {
         </Button>
       </div>
       <FullCalendar
-        plugins={[dayGridPlugin]}
+        ref={calendarRef}
+        plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         initialView="dayGridMonth"
         weekends={true}
-        events={events}
         height={"90vh"}
         editable={true}
         selectable={true}
         selectMirror={true}
         dayMaxEvents={true}
+        headerToolbar={{
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,dayGridWeek,dayGridDay,listWeek",
+        }}
       />
       <AddScheduleModal
         handleShowModal={handleShowModal}
         handleCloseModal={handleCloseModal}
         showModal={showModal}
+        handleAddEvent={(event) => handleAddEvent(event)}
       />
     </div>
   );

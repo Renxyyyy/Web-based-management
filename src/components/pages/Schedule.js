@@ -5,7 +5,7 @@ import Calendar from "../Calendar";
 export default function Schedule() {
   return (
     <>
-      <h1 className="schedule">Schedule</h1>
+      <h1 className="schedule-text">Schedule</h1>
       <Calendar />
     </>
   );

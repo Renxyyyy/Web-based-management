@@ -26,13 +26,8 @@
   font-size: 100px;
 }
 
-.schedule {
-  background-image: url("../public/images/imageCourt.jpg");
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+.schedule-text {
+  font-size: 2rem;
 }
 
 .sign-up {
