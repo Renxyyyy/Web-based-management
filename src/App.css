@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .home,
@@ -18,7 +18,7 @@
 }
 
 .about {
-  background-image: url('/images/imageRoad.jpg');
+  background-image: url("../public/images/imageRoad.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 
 .schedule {
-  background-image: url('/images/imageCourt.jpg');
+  background-image: url("../public/images/imageCourt.jpg");
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -36,7 +36,7 @@
 }
 
 .sign-up {
-  background-image: url('/images/imageEntrance.jpg');
+  background-image: url("../public/images/imageEntrance.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
