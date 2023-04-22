@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./AddSchedule.css";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
+import moment from "moment";
 
 const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
   const [formInput, setFormInput] = useState({
@@ -11,7 +12,7 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
     title: "",
     start: new Date(),
     end: new Date(),
-    paymentMethod: "",
+    paymentMethod: "Gcash",
     currentDate: new Date(Date.now()).toDateString(),
   });
 
@@ -21,8 +22,8 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
 
   const handleSubmit = (e) => {
     const title = formInput.title;
-    const start = formInput.start;
-    const end = formInput.end;
+    const start = moment(formInput.start).format();
+    const end = moment(formInput.end).format();
     handleAddEvent({
       title,
       start,

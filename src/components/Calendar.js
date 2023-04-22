@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 
 const Calendar = () => {
   const [showModal, setShowModal] = useState(false);
+  const [events, setEvents] = useState([]);
   const calendarRef = useRef(null);
 
   const handleShowModal = () => {
@@ -20,9 +21,12 @@ const Calendar = () => {
 
   const handleAddEvent = (event) => {
     let calendarApi = calendarRef.current.getApi();
+    calendarApi.unselect();
     calendarApi.addEvent(event);
     console.log(event);
+    setEvents([...events, event]);
   };
+
   return (
     <div className="calendar-wrapper">
       <div className="d-flex justify-content-end align-items-end">
@@ -34,12 +38,13 @@ const Calendar = () => {
         ref={calendarRef}
         plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
         initialView="dayGridMonth"
-        weekends={true}
         height={"90vh"}
         editable={true}
         selectable={true}
         selectMirror={true}
-        dayMaxEvents={true}
+        dayMaxEvents={false}
+        events={events}
+        weekends={true}
         headerToolbar={{
           left: "prev,next today",
           center: "title",
