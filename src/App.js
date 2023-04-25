@@ -13,6 +13,8 @@ import Renting from "./components/Renting";
 import ErrorPage from "./components/pages/ErrorPage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase.config";
+import { DashboardRoutes } from "./routes/routes";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   const [user] = useAuthState(auth);
@@ -37,6 +39,11 @@ function App() {
         {user && <Route path="/create" element={<CreateEditUser />} />}
 
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/dashboard" element={<Dashboard />}>
+          {DashboardRoutes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
       </Routes>
     </>
   );

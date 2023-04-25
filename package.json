@@ -24,6 +24,7 @@
     "react-geocode": "^0.2.3",
     "react-google-autocomplete": "^2.7.1",
     "react-google-maps": "^7.3.0",
+    "react-icons": "^4.8.0",
     "react-router-dom": "^6.4.2",
     "react-scripts": "^5.0.1",
     "react-toastify": "^9.1.1"

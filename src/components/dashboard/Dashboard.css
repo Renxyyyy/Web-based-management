@@ -1,0 +1,61 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+.dashboard-sidebar {
+  background-color: #f3f1f5;
+  position: relative;
+  padding: 5rem 0;
+  transition: all 0.3s ease-in-out;
+}
+.dashboard-sidebar h3 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.dashboard-sidebar-links-container {
+  margin-top: 2.5rem;
+}
+.dashboard-sidebar-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  height: 2.5rem;
+  padding-left: 0.3rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+.dashboard-sidebar-links p:last-child {
+  font-size: 1.03rem;
+}
+.dashboard-content {
+  background: #cbd4cb;
+  width: 100%;
+}
+
+.dashboard-sidebar-links:hover {
+  background: #618362;
+  color: white;
+}
+.dashboard-content-main {
+  text-align: center;
+}
+.dashboard-menu {
+  position: absolute;
+  right: -12px;
+  top: 25px;
+  background: #618362;
+  border-radius: 100%;
+  padding: 0.3rem;
+  cursor: pointer;
+  border: 3px solid #cbd4cb;
+}
+
+.admin-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

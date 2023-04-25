@@ -49,6 +49,12 @@ const TestNavbar = () => {
               >
                 Directory
               </Nav.Link>
+              <Nav.Link
+                className="text-white"
+                onClick={() => navigate("/dashboard")}
+              >
+                Dashboard
+              </Nav.Link>
               {user?.email !== "renxy@email.com" ? (
                 ""
               ) : (
