@@ -33,7 +33,6 @@ const CarStickerForm = () => {
     <div>
       <h3 className="mt-5">Car Sticker</h3>
       <div className="car-form-wrapper">
-        {JSON.stringify(form)}
         <Form>
           <Row xs={1} sm={1} md={2} lg={2} xl={2}>
             <div>
