@@ -21,6 +21,7 @@ const Dashboard = () => {
   const handleToggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+
   return (
     <div className="dashboard-container">
       <div

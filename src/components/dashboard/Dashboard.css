@@ -1,6 +1,7 @@
 .dashboard-container {
   display: flex;
   height: 100vh;
+  position: relative;
 }
 .dashboard-sidebar {
   background-color: #f3f1f5;
@@ -34,6 +35,7 @@
 .dashboard-content {
   background: #cbd4cb;
   width: 100%;
+  overflow: hidden;
 }
 
 .dashboard-sidebar-links:hover {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import TestNavbar from "./components/TestNavbar";
 import "./App.css";
 import Home from "./components/pages/Home";
@@ -15,9 +15,19 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase.config";
 import { DashboardRoutes } from "./routes/routes";
 import Dashboard from "./components/dashboard/Dashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
+  const [isSignedIn, setIsSignedIn] = useState(null);
   const [user] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user) {
+      setIsSignedIn(true);
+    } else {
+      setIsSignedIn(false);
+    }
+  }, [user]);
   return (
     <>
       <TestNavbar />
@@ -26,6 +36,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/schedule" element={<Schedule />} />
         {/* <Route path='/directory' element={<Directory />} /> */}
+        <Route />
         <Route path="/sign-up" element={<NewForm />} />
         {user?.email !== "renxy@email.com" ? (
           ""
@@ -39,7 +50,14 @@ function App() {
         {user && <Route path="/create" element={<CreateEditUser />} />}
 
         <Route path="*" element={<ErrorPage />} />
-        <Route path="/dashboard" element={<Dashboard />}>
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute isSignedIn={isSignedIn}>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        >
           {DashboardRoutes.map((route) => (
             <Route key={route.path} path={route.path} element={route.element} />
           ))}
