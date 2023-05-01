@@ -1,0 +1,35 @@
+.label {
+  color: black;
+  font-size: 1rem;
+}
+.payment-option-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.terms-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.note-wrapper {
+  text-align: center;
+}
+.note-wrapper p {
+  color: red;
+}
+
+.note-wrapper span {
+  color: black;
+  margin-left: 0.3rem;
+}
+
+.gcash-qr {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

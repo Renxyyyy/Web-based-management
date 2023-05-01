@@ -1,12 +1,13 @@
- .Form {
-  background: url('/images/imageEntrance.jpg') center center/cover no-repeat;
+.Form {
+  background-image: url("../../../public/images/imageEntrance.jpg") center
+    center/cover no-repeat;
   height: 50rem;
- }
- .newform {
-  background-color:rgb(40, 40, 40);
-  padding: 5rem;
+}
+.newform {
+  background-color: rgb(40, 40, 40);
+  padding: 2rem;
   border-radius: 0.8rem;
-  width: 30rem;
+  width: 37rem;
   margin-bottom: 2rem;
 }
 .form_text {
@@ -15,27 +16,18 @@
   padding-bottom: 1.4rem;
 }
 .newbtn {
-  background: linear-gradient(
-    90deg,
-    rgb(132, 4, 4) 0%,
-    rgb(227, 37, 37) 100%
-  );
+  background: linear-gradient(90deg, rgb(132, 4, 4) 0%, rgb(227, 37, 37) 100%);
   border-radius: 2px;
   border: none !important;
   outline: none !important;
   transition: all 0.4s ease-out;
 }
-.newbtn:hover{
-  background: linear-gradient(
-    90deg,
-    rgb(167, 3, 3) 0%,
-    rgb(220, 53, 53) 100%
-  );
-  
+.newbtn:hover {
+  background: linear-gradient(90deg, rgb(167, 3, 3) 0%, rgb(220, 53, 53) 100%);
 }
 .form-container {
   margin: 100px auto;
-  margin-right: 150px ;
+  margin-right: 150px;
   width: 800px;
   position: relative;
   border-radius: 10px;
@@ -54,8 +46,7 @@
   cursor: pointer;
 }
 
-.form-success 
-{
+.form-success {
   text-align: center;
   font-size: 24px;
   margin-top: 80px;
@@ -128,11 +119,7 @@
   height: 50px;
   margin-top: 90px;
   border-radius: 2px;
-  background: linear-gradient(
-    90deg,
-    rgb(132, 4, 4) 0%,
-    rgb(227, 37, 37) 100%
-  );
+  background: linear-gradient(90deg, rgb(132, 4, 4) 0%, rgb(227, 37, 37) 100%);
   outline: none;
   border: none;
   color: #fff;
@@ -141,11 +128,7 @@
 
 .form-input-btn:hover {
   cursor: pointer;
-  background: linear-gradient(
-    90deg,
-    rgb(167, 3, 3) 0%,
-    rgb(220, 53, 53) 100%
-  );
+  background: linear-gradient(90deg, rgb(167, 3, 3) 0%, rgb(220, 53, 53) 100%);
   transition: all 0.4s ease-out;
 }
 
