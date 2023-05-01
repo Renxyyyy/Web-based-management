@@ -3,10 +3,14 @@ import {
   HiOutlineCalendar,
   HiOutlineUserGroup,
   HiOutlineOfficeBuilding,
+  HiOutlineTruck,
+  HiOutlineStar,
 } from "react-icons/hi";
 import { HiArrowLeftOnRectangle } from "react-icons/hi2";
 import RegisteredUsers from "../components/dashboard/RegisteredUsers";
 import EntryGate from "../components/dashboard/EntryGate";
+import CarStickerForm from "../components/dashboard/CarStickerForm";
+import EntryForm from "../components/dashboard/EntryForm";
 
 export const DashboardRoutes = [
   {
@@ -26,6 +30,19 @@ export const DashboardRoutes = [
     path: "dashboard/entry-gate",
     element: <EntryGate />,
     icon: <HiOutlineOfficeBuilding size={30} />,
+  },
+  {
+    name: "Car Sticker",
+    path: "dashboard/car-sticker-form",
+    element: <CarStickerForm />,
+    icon: <HiOutlineStar size={30} />,
+    hasMargin: true,
+  },
+  {
+    name: "Delivery",
+    path: "dashboard/entry-form",
+    element: <EntryForm />,
+    icon: <HiOutlineTruck size={30} />,
   },
   {
     name: "Logout",

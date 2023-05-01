@@ -41,7 +41,7 @@ const Dashboard = () => {
               key={route.path}
               className="dashboard-sidebar-links"
               style={{
-                marginTop: route.gap ? "14rem" : "0",
+                marginTop: route.gap ? "14rem" : route.hasMargin ? "5rem" : "0",
                 background: route.gap ? "#618362" : "",
                 color: route.gap ? "white" : "",
               }}
