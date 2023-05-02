@@ -32,93 +32,86 @@ const CarStickerForm = () => {
   return (
     <div>
       <h3 className="mt-5">Car Sticker</h3>
-      <div className="car-form-wrapper">
-        <Form>
-          <Row xs={1} sm={1} md={2} lg={2} xl={2}>
-            <div>
-              <Form.Group className="mb-3">
-                <Form.Label className="label">Name</Form.Label>
-                <Form.Control
-                  onChange={handleChangeForm}
-                  name="name"
-                  type="text"
-                  placeholder="Enter your name..."
-                />
-              </Form.Group>
-            </div>
-            <div>
-              <Form.Group className="mb-3">
-                <Form.Label className="label">Phone Number</Form.Label>
-                <Form.Control
-                  onChange={handleChangeForm}
-                  name="phoneNumber"
-                  type="text"
-                  placeholder="Enter phone number..."
-                />
-              </Form.Group>
-            </div>
-          </Row>
+      <Form className="car-form-wrapper">
+        <Row className="mt-5" xs={1} sm={1} md={2} lg={2} xl={2}>
           <div>
-            <Form.Label className="label">Type of Vehicle</Form.Label>
-            {!isOthersSelected && (
-              <Form.Select onChange={handleChangeForm} name="vehicle">
-                <option>Motorbike</option>
-                <option>SUV</option>
-                <option>Car</option>
-                <option>Van</option>
-                <option>Others</option>
-              </Form.Select>
-            )}
-            {isOthersSelected && (
-              <>
-                <Form.Control
-                  onChange={handleChangeForm}
-                  name="vehicle"
-                  type="text"
-                  placeholder="Please specify..."
-                />
-                <Button
-                  onClick={handleCancel}
-                  className="my-3"
-                  variant="danger"
-                >
-                  Cancel
-                </Button>
-              </>
-            )}
+            <Form.Group className="mb-3">
+              <Form.Label className="label">Name</Form.Label>
+              <Form.Control
+                onChange={handleChangeForm}
+                name="name"
+                type="text"
+                placeholder="Enter your name..."
+              />
+            </Form.Group>
           </div>
-
-          <Row xs={1} sm={1} md={2} lg={2} xl={2}>
-            <div>
-              <Form.Group className="mb-3">
-                <Form.Label className="label">Email</Form.Label>
-                <Form.Control
-                  onChange={handleChangeForm}
-                  name="email"
-                  type="email"
-                  placeholder="Enter your email..."
-                />
-              </Form.Group>
-            </div>
-            <div>
-              <Form.Group className="mb-3">
-                <Form.Label className="label">Plate Number</Form.Label>
-                <Form.Control
-                  onChange={handleChangeForm}
-                  name="plateNumber"
-                  type="text"
-                  placeholder="Enter your plate number..."
-                />
-              </Form.Group>
-            </div>
-          </Row>
-          <div className="submit-btn-wrapper">
-            <Button className="submit-btn" type="submit">
-              Submit
-            </Button>
+          <div>
+            <Form.Group className="mb-3">
+              <Form.Label className="label">Phone Number</Form.Label>
+              <Form.Control
+                onChange={handleChangeForm}
+                name="phoneNumber"
+                type="text"
+                placeholder="Enter phone number..."
+              />
+            </Form.Group>
           </div>
-        </Form>
-      </div>
+        </Row>
+        <div className="mt-5">
+          <Form.Label className="label">Type of Vehicle</Form.Label>
+          {!isOthersSelected && (
+            <Form.Select onChange={handleChangeForm} name="vehicle">
+              <option>Motorbike</option>
+              <option>SUV</option>
+              <option>Car</option>
+              <option>Van</option>
+              <option>Others</option>
+            </Form.Select>
+          )}
+          {isOthersSelected && (
+            <>
+              <Form.Control
+                onChange={handleChangeForm}
+                name="vehicle"
+                type="text"
+                placeholder="Please specify..."
+              />
+              <Button onClick={handleCancel} className="my-3" variant="danger">
+                Cancel
+              </Button>
+            </>
+          )}
+        </div>
+        <Row className="mt-5" xs={1} sm={1} md={2} lg={2} xl={2}>
+          <div>
+            <Form.Group className="mb-3">
+              <Form.Label className="label">Email</Form.Label>
+              <Form.Control
+                onChange={handleChangeForm}
+                name="email"
+                type="email"
+                placeholder="Enter your email..."
+              />
+            </Form.Group>
+          </div>
+          <div>
+            <Form.Group className="mb-3">
+              <Form.Label className="label">Plate Number</Form.Label>
+              <Form.Control
+                onChange={handleChangeForm}
+                name="plateNumber"
+                type="text"
+                placeholder="Enter your plate number..."
+              />
+            </Form.Group>
+          </div>
+        </Row>
+        <div className="submit-btn-wrapper">
+          <Button className="submit-btn" type="submit">
+            Submit
+          </Button>
+        </div>
+      </Form>
     </div>
   );
 };
