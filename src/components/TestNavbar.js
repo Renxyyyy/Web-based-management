@@ -19,7 +19,6 @@ const TestNavbar = () => {
 
   return (
     <div>
-      {" "}
       <Navbar className="navbar" expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="d-1 text-white pr-5">
