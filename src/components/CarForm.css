@@ -1,12 +1,12 @@
 .CarForm {
   text-align: center;
-  background-color: aquamarine;
+  background-color: rgb(97,131,98);
   background-size: cover;
   height: 200vh;
 }
 
 .Header {
-  background-color: bisque;
+  background-color: rgb(97,131,98);
   margin-bottom: 5vh;
   padding-bottom: 5vh;
   padding-top: 5vh;
@@ -58,7 +58,7 @@ input {
 }
 
 .btn {
-  background-color: blue;
+  background-color: #4d94ff;
   font-size: 30px;
   color: white;
   border-radius: 4px;

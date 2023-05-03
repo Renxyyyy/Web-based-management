@@ -82,7 +82,7 @@ function EntryForm() {
           <label htmlFor="entry" className="form-label">
             Time of Entry:
           </label>
-          <input type="Form-control" name="text" onChange={onChangeHandler} />
+          <input type="time" name="text" onChange={onChangeHandler} />
           <span className="non-valid">{formError.entry}</span>
         </div>
         <div className="form-group">
