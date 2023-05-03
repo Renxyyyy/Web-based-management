@@ -48,7 +48,7 @@ const TestNavbar = () => {
               >
                 Directory
               </Nav.Link>
-              {user && (
+              {user === "renxy@email.com" && (
                 <Nav.Link
                   className="text-white"
                   onClick={() => navigate("/dashboard")}
