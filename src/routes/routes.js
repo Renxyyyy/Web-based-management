@@ -47,6 +47,7 @@ export const DashboardRoutes = [
   {
     name: "Logout",
     path: "#",
+    isFilled: true,
     element: null,
     icon: <HiArrowLeftOnRectangle size={30} />,
     gap: true,
