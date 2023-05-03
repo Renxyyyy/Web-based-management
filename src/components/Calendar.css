@@ -1,4 +1,8 @@
 .calendar_wrapper {
   margin: 1rem auto;
-  background-color: white;
+}
+.calendar {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.9rem;
 }

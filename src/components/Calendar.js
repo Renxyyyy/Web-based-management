@@ -34,23 +34,25 @@ const Calendar = () => {
           Add Schedule
         </Button>
       </div>
-      <FullCalendar
-        ref={calendarRef}
-        plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
-        initialView="dayGridMonth"
-        height={"90vh"}
-        editable={true}
-        selectable={true}
-        selectMirror={true}
-        dayMaxEvents={false}
-        events={events}
-        weekends={true}
-        headerToolbar={{
-          left: "prev,next today",
-          center: "title",
-          right: "dayGridMonth,dayGridWeek,dayGridDay,listWeek",
-        }}
-      />
+      <div className="calendar">
+        <FullCalendar
+          ref={calendarRef}
+          plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
+          initialView="dayGridMonth"
+          height={"90vh"}
+          editable={true}
+          selectable={true}
+          selectMirror={true}
+          dayMaxEvents={false}
+          events={events}
+          weekends={true}
+          headerToolbar={{
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,dayGridWeek,dayGridDay,listWeek",
+          }}
+        />
+      </div>
       <AddScheduleModal
         handleShowModal={handleShowModal}
         handleCloseModal={handleCloseModal}
