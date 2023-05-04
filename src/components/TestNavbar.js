@@ -38,17 +38,11 @@ const TestNavbar = () => {
               </Nav.Link>
               <Nav.Link
                 className="text-white"
-                onClick={() => navigate("/schedule")}
-              >
-                Schedule
-              </Nav.Link>
-              <Nav.Link
-                className="text-white"
                 onClick={() => navigate("/directory")}
               >
                 Directory
               </Nav.Link>
-              {user === "renxy@email.com" && (
+              {user && (
                 <Nav.Link
                   className="text-white"
                   onClick={() => navigate("/dashboard")}

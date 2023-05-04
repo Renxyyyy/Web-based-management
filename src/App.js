@@ -4,7 +4,6 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/pages/About";
-import Schedule from "./components/pages/Schedule";
 // import Directory from './components/pages/Directory';
 import CreateEditUser from "./components/CreateEditUser";
 import NewForm from "./components/authorization/NewForm";
@@ -34,7 +33,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/schedule" element={<Schedule />} />
         {/* <Route path='/directory' element={<Directory />} /> */}
         <Route />
         <Route path="/sign-up" element={<NewForm />} />
