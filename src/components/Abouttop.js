@@ -57,14 +57,14 @@ import './Abouttop.css'
       <Accordion.Item eventKey="2">
         <Accordion.Header>Contact Us</Accordion.Header>
         <Accordion.Body>
-        <p>Covered Court Contact: 029019210</p>
-        <p>Home Owners Association: 092011801</p>
-        <p>Email: rizalhome@gmail.com</p> 
+        <p>Telephone Number: (02)825-19544</p>
+        <p>Cellphone Number: 0994-840-3667</p>
+        <p>Email: secretariat.rizalvillagealabang@gmail.com</p> 
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
     </Container>
-      
+
     </section>
  
      
@@ -79,7 +79,7 @@ import './Abouttop.css'
            <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image1'/>
           </div>
-          <h4 class="Name">Anna Deynah</h4>
+          <h4 class="Name">Carolyn S. Ferrer</h4>
           <h6 class="Position">President</h6>
           <p class="Description">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
@@ -92,7 +92,7 @@ import './Abouttop.css'
           <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image2'/>
           </div>
-          <h4 class="Name">John Doe</h4>
+          <h4 class="Name">Jose Reeldikc C. Deiparine</h4>
           <h6 class="Position">Vice President</h6>
           <p class="Description">Ut enim ad minima veniam, quis nostrum exercitationem ullam
             corporis suscipit laboriosam, nisi ut aliquid commodi.</p>
@@ -104,8 +104,8 @@ import './Abouttop.css'
           <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image3'/>
           </div>
-          <h4 class="Name">Maria Kate</h4>
-          <h6 class="Position">Treasurer</h6>
+          <h4 class="Name">Edriane C. Bamba</h4>
+          <h6 class="Position">Secretary</h6>
           <p class="Description">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti.</p>
@@ -117,8 +117,8 @@ import './Abouttop.css'
           <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image4'/>
           </div>
-          <h4 class="Name">Maria Kate</h4>
-          <h6 class="Position">Seargent of arms</h6>
+          <h4 class="Name">Jaworski C. Rendar</h4>
+          <h6 class="Position">Assitant Secretary</h6>
           <p class="Description">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti.</p>
@@ -130,7 +130,7 @@ import './Abouttop.css'
           <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
           </div>
-          <h4 class="Name">Maria Kate</h4>
+          <h4 class="Name">Rowena C. Calinisan</h4>
           <h6 class="Position">Treasurer</h6>
           <p class="Description">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -143,8 +143,73 @@ import './Abouttop.css'
           <div class="avatar mx-auto">
             <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image6'/>
           </div>
-          <h4 class="Name">Maria Kate</h4>
-          <h6 class="Position">Treasurer</h6>
+          <h4 class="Name">Raenald De Araw</h4>
+          <h6 class="Position">Assitan Tresurer</h6>
+          <p class="Description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="testimonial mb-5" style={{border:'3px solid black', borderRadius:'10px'}}>
+          <div class="avatar mx-auto">
+            <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
+          </div>
+          <h4 class="Name">Maria Ligaya J. Salomabao</h4>
+          <h6 class="Position">Auditor</h6>
+          <p class="Description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="testimonial mb-5" style={{border:'3px solid black', borderRadius:'10px'}}>
+          <div class="avatar mx-auto">
+            <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
+          </div>
+          <h4 class="Name">Roberto J. Tolosa</h4>
+          <h6 class="Position">Business Manager</h6>
+          <p class="Description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="testimonial mb-5" style={{border:'3px solid black', borderRadius:'10px'}}>
+          <div class="avatar mx-auto">
+            <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
+          </div>
+          <h4 class="Name">Virgilio P. Constantino</h4>
+          <h6 class="Position">P.R.O</h6>
+          <p class="Description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="testimonial mb-5" style={{border:'3px solid black', borderRadius:'10px'}}>
+          <div class="avatar mx-auto">
+            <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
+          </div>
+          <h4 class="Name">Aaron Manalo</h4>
+          <h6 class="Position">Sergeant of Arms</h6>
+          <p class="Description">
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+            blanditiis praesentium voluptatum deleniti atque corrupti.</p>
+        </div>
+        </div>
+
+        <div class="col-md-4">
+        <div class="testimonial mb-5" style={{border:'3px solid black', borderRadius:'10px'}}>
+          <div class="avatar mx-auto">
+            <img src="images/samplepic.png" style={{height: '10rem'}} class="rounded-circle z-depth-1 img-fluid" alt='image5'/>
+          </div>
+          <h4 class="Name">Peter James C. Valenzuela</h4>
+          <h6 class="Position">Board Of Director Member</h6>
           <p class="Description">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui
             blanditiis praesentium voluptatum deleniti atque corrupti.</p>
