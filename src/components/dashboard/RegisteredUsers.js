@@ -1,7 +1,7 @@
 import React from "react";
 
 const RegisteredUsers = () => {
-  return <div>Registered Users</div>;
+  return <div>RegisteredUsers</div>;
 };
 
 export default RegisteredUsers;

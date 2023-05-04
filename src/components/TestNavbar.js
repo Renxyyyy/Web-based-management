@@ -19,7 +19,6 @@ const TestNavbar = () => {
 
   return (
     <div>
-      {" "}
       <Navbar className="navbar" expand="lg">
         <Container>
           <Navbar.Brand href="#home" className="d-1 text-white pr-5">
@@ -39,22 +38,18 @@ const TestNavbar = () => {
               </Nav.Link>
               <Nav.Link
                 className="text-white"
-                onClick={() => navigate("/schedule")}
-              >
-                Schedule
-              </Nav.Link>
-              <Nav.Link
-                className="text-white"
                 onClick={() => navigate("/directory")}
               >
                 Directory
               </Nav.Link>
-              <Nav.Link
-                className="text-white"
-                onClick={() => navigate("/dashboard")}
-              >
-                Dashboard
-              </Nav.Link>
+              {user === "renxy@email.com" && (
+                <Nav.Link
+                  className="text-white"
+                  onClick={() => navigate("/dashboard")}
+                >
+                  Dashboard
+                </Nav.Link>
+              )}
               {user?.email !== "renxy@email.com" ? (
                 ""
               ) : (

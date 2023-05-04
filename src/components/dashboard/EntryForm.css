@@ -1,0 +1,36 @@
+.entry-form-wrapper {
+  background-color: white;
+  width: 80% !important;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.label {
+  color: black;
+}
+h3 {
+  text-align: center;
+}
+.submit-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.submit-btn {
+  background-color: #618362;
+  border: none;
+  outline: none;
+}
+.submit-btn:hover {
+  background-color: #7e9c7f;
+}
+
+@media all and (min-width: 60em) {
+  .entry-form-wrapper {
+    background-color: white;
+    width: 52%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+}
