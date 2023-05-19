@@ -42,7 +42,7 @@ const TestNavbar = () => {
               >
                 Directory
               </Nav.Link>
-              {user === "renxy@email.com" && (
+              {user?.email === "adminaccount@gmail.com" && (
                 <Nav.Link
                   className="text-white"
                   onClick={() => navigate("/dashboard")}
@@ -50,7 +50,7 @@ const TestNavbar = () => {
                   Dashboard
                 </Nav.Link>
               )}
-              {user?.email !== "renxy@email.com" ? (
+              {user?.email !== "adminaccount@gmail.com" ? (
                 ""
               ) : (
                 <Nav.Link
