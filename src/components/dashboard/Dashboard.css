@@ -1,6 +1,6 @@
 .dashboard-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 .dashboard-sidebar {
@@ -43,7 +43,7 @@
   color: white;
 }
 .dashboard-content-main {
-  text-align: center;
+  padding: 1rem;
 }
 .dashboard-menu {
   position: absolute;

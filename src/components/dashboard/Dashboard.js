@@ -12,6 +12,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [selectedRoute, setSelectedRoute] = useState("");
 
   const isRouteDashboard = location.pathname === "/dashboard";
   const handleNavigate = (route) => {
@@ -20,6 +21,9 @@ const Dashboard = () => {
 
   const handleToggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+  };
+  const handleSelectRoute = (selectedRouteName) => {
+    setSelectedRoute(selectedRouteName);
   };
 
   return (
@@ -37,13 +41,20 @@ const Dashboard = () => {
         <div className="dashboard-sidebar-links-container">
           {DashboardRoutes.map((route) => (
             <div
-              onClick={() => handleNavigate(route.path)}
+              onClick={() => {
+                handleNavigate(route.path);
+                handleSelectRoute(route.name);
+              }}
               key={route.path}
               className="dashboard-sidebar-links"
               style={{
-                marginTop: route.gap ? "14rem" : "0",
-                background: route.gap ? "#618362" : "",
-                color: route.gap ? "white" : "",
+                marginTop: route.gap ? "14rem" : route.hasMargin ? "5rem" : "0",
+                background: selectedRoute === route.name && "#618362",
+                backgroundColor: route.isFilled && "#618362",
+                color:
+                  selectedRoute === route.name && route.isFilled
+                    ? "white"
+                    : "black",
               }}
             >
               <p style={{ marginLeft: isSidebarOpen ? "0" : "0.6rem" }}>
