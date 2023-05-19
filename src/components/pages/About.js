@@ -7,7 +7,7 @@ import Footer from "../FooterAbout";
 export default function About() {
   return (
     <>
-      <DirectoryMap />
+    <DirectoryMap />
       <Abouttop />
       <Footer />
     </>

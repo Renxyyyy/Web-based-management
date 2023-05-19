@@ -34,9 +34,9 @@ import './Abouttop.css'
  
        <section>
         <Container style={{marginTop:"4rem", marginBottom:"4rem"}}>
-          <h1 className="my-5">INSIDE THE RIZAL VILLAGE</h1>
+          <h1 className="my-5 ps-20">INSIDE THE RIZAL VILLAGE</h1>
        <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0"> 
+      <Accordion.Item eventKey="0" style={{marginRight: '80vh'}}> 
         <Accordion.Header>Road Signs</Accordion.Header>
         <Accordion.Body>
           <Row style={{marginLeft: '20px',}}>
@@ -45,7 +45,7 @@ import './Abouttop.css'
         </Row>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
+      <Accordion.Item eventKey="1" style={{marginRight: '80vh'}}>
         <Accordion.Header>Covered Court</Accordion.Header>
         <Accordion.Body>
           <Row style={{marginLeft: '20px',}}>
@@ -54,7 +54,7 @@ import './Abouttop.css'
         </Row>
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="2">
+      <Accordion.Item eventKey="2" style={{marginRight: '80vh'}}>
         <Accordion.Header>Contact Us</Accordion.Header>
         <Accordion.Body>
         <p>Telephone Number: (02)825-19544</p>
