@@ -35,7 +35,7 @@ function App() {
         {/* <Route path='/directory' element={<Directory />} /> */}
         <Route />
         <Route path="/sign-up" element={<NewForm />} />
-        {user?.email !== "renxy@email.com" ? (
+        {user?.email !== "adminaccount@gmail.com" ? (
           ""
         ) : (
           <>
