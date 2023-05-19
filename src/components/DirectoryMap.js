@@ -2,8 +2,8 @@ import { useJsApiLoader, GoogleMap, Marker } from "@react-google-maps/api";
 import React from "react";
 
 const center = {
-  lat: 14.42574,
-  lng: 121.04316,
+  lat: 14.426315228145299,
+  lng: 121.0451765737857,
 };
 
 const DirectoryMap = () => {
