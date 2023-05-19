@@ -21,7 +21,7 @@ import './Abouttop.css'
                      </h3>
              </div>  
              <div>
-             <img src="images/imageEntrance.jpg" style={{height:"20rem", width:"auto", display:"flex", justifySelf:"flex-end", border:'3px solid black', borderRadius:'10px'}} alt='image0'/>
+             <img src="images/imageEntrance.jpg" style={{height:"30rem", width:"auto", display:"flex", justifySelf:"flex-end", border:'3px solid black', borderRadius:'10px'}} alt='image0'/>
              </div>
             </Row>
            
