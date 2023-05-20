@@ -4,16 +4,16 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import { Routes, Route } from "react-router-dom";
 import About from "./components/pages/About";
-import CreateEditUser from "./components/CreateEditUser";
 import NewForm from "./components/authorization/NewForm";
 import Login from "./components/authorization/Login";
-import Renting from "./components/Renting";
 import ErrorPage from "./components/pages/ErrorPage";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "./firebase.config";
 import { DashboardRoutes } from "./routes/routes";
 import Dashboard from "./components/dashboard/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Calendar from "./components/Calendar";
+import CreateEditUser from "./components/dashboard/CreateEditUser";
 
 function App() {
   const [isSignedIn, setIsSignedIn] = useState(null);
@@ -32,19 +32,22 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path='/directory' element={<Directory />} /> */}
-        <Route />
+        <Route path="/schedule" element={<Calendar />} />
         <Route path="/sign-up" element={<NewForm />} />
-        {user?.email !== "adminaccount@gmail.com" ? (
-          ""
-        ) : (
+        {user?.email === "adminaccount@gmail.com" && (
           <>
-            <Route path="/edit/:id" element={<CreateEditUser />} />
-            <Route path="/user-data" element={<Renting />} />
+            <Route
+              path="/registered-users/add-user"
+              element={<CreateEditUser />}
+            />
+            <Route
+              path="/registered-users/edit-user/:id"
+              element={<CreateEditUser />}
+            />
           </>
         )}
+
         <Route path="/login" element={<Login />} />
-        {user && <Route path="/create" element={<CreateEditUser />} />}
 
         <Route path="*" element={<ErrorPage />} />
         <Route
