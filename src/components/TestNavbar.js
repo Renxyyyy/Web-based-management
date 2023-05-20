@@ -9,6 +9,7 @@ import { signOut } from "firebase/auth";
 const TestNavbar = () => {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
+  const isAdmin = user?.email === "adminaccount@gmail.com";
 
   //Signing out
   const handleSignOut = () => {
@@ -36,28 +37,20 @@ const TestNavbar = () => {
               >
                 About
               </Nav.Link>
-              <Nav.Link
-                className="text-white"
-                onClick={() => navigate("/directory")}
-              >
-                Directory
-              </Nav.Link>
-              {user?.email === "adminaccount@gmail.com" && (
+              {user && (
+                <Nav.Link
+                  className="text-white"
+                  onClick={() => navigate("/schedule")}
+                >
+                  Schedule
+                </Nav.Link>
+              )}
+              {isAdmin && (
                 <Nav.Link
                   className="text-white"
                   onClick={() => navigate("/dashboard")}
                 >
                   Dashboard
-                </Nav.Link>
-              )}
-              {user?.email !== "adminaccount@gmail.com" ? (
-                ""
-              ) : (
-                <Nav.Link
-                  className="text-white"
-                  onClick={() => navigate("/user-data")}
-                >
-                  Users
                 </Nav.Link>
               )}
             </Nav>
