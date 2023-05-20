@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Container, Row } from 'react-bootstrap';
 import './Abouttop.css'
+import Directory from "../components/DirectoryMap"
  
   function Content() {
     return (
@@ -65,8 +66,8 @@ import './Abouttop.css'
     </Accordion>
     </Container>
 
+             < Directory />
     </section>
- 
      
     <section class="background1">    
      <div class="container">
