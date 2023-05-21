@@ -15,11 +15,22 @@ const DirectoryMap = () => {
     return <h1>Fetching maps...</h1>;
   }
   return (
-    <div style={{ height: "100vh", zIndex: "3" }}>
+    <div
+      style={{
+        height: "90vh",
+        zIndex: "3",
+        marginTop: "2rem",
+      }}
+    >
       <GoogleMap
         center={center}
-        zoom={19}
-        mapContainerStyle={{ width: "100%", height: "100%" }}
+        zoom={18}
+        mapContainerStyle={{
+          width: "85%",
+          height: "70%",
+          border: "2px solid #618362",
+          borderRadius: "0.6rem",
+        }}
       >
         <Marker
           name={"Dolores park"}

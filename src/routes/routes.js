@@ -11,6 +11,7 @@ import RegisteredUsers from "../components/dashboard/RegisteredUsers";
 import EntryGate from "../components/dashboard/EntryGate";
 import CarStickerForm from "../components/dashboard/CarStickerForm";
 import EntryForm from "../components/dashboard/EntryForm";
+import Users from "../components/dashboard/Users";
 
 export const DashboardRoutes = [
   {
@@ -23,6 +24,12 @@ export const DashboardRoutes = [
     name: "Registered Users",
     path: "dashboard/registered-users",
     element: <RegisteredUsers />,
+    icon: <HiOutlineUserGroup size={30} />,
+  },
+  {
+    name: "Users",
+    path: "dashboard/users",
+    element: <Users />,
     icon: <HiOutlineUserGroup size={30} />,
   },
   {

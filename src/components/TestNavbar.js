@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase.config";
 import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
 
 const TestNavbar = () => {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ const TestNavbar = () => {
   const handleSignOut = () => {
     signOut(auth);
     navigate("/");
-    alert("Successfully logged out");
+    toast.success("Successfully logged out");
   };
 
   return (
@@ -37,14 +38,12 @@ const TestNavbar = () => {
               >
                 About
               </Nav.Link>
-              {user && (
-                <Nav.Link
-                  className="text-white"
-                  onClick={() => navigate("/schedule")}
-                >
-                  Schedule
-                </Nav.Link>
-              )}
+              <Nav.Link
+                className="text-white"
+                onClick={() => navigate("/schedule")}
+              >
+                Schedule
+              </Nav.Link>
               {isAdmin && (
                 <Nav.Link
                   className="text-white"

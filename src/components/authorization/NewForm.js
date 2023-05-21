@@ -1,11 +1,12 @@
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../firebase.config";
+import { auth, db } from "../../firebase.config";
 import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import "./Form.css";
+import { addDoc, collection, Timestamp } from "firebase/firestore";
 
 const NewForm = () => {
   const [fullName, setFullName] = useState("");
@@ -17,16 +18,22 @@ const NewForm = () => {
   //Signing up user
   const handleSignup = async () => {
     if (password !== confirmPassword) {
-      return alert("Passwords do not match");
+      return toast.error("Passwords do not match");
     }
 
     try {
-      alert("Successfully created account");
+      toast.success("Successfully created account");
       await createUserWithEmailAndPassword(auth, email, password);
       updateProfile(auth.currentUser, { displayName: fullName });
+      const registeredUsersRef = collection(db, "RegisteredUsers");
+      addDoc(registeredUsersRef, {
+        email: email,
+        dateCreated: Timestamp.now().toDate(),
+        displayName: fullName,
+      });
       navigate("/");
     } catch (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
   };
   return (
