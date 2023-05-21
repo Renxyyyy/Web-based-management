@@ -12,10 +12,10 @@ const firebaseConfig = {
   storageBucket: "rizalvillage.appspot.com",
   messagingSenderId: "850913287994",
   appId: "1:850913287994:web:eb266845ab745c40fa3a03",
-  measurementId: "G-NLB0KH51EY"
+  measurementId: "G-NLB0KH51EY",
 };
 
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
 export const storage = getStorage(app);
