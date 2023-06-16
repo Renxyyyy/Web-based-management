@@ -1,38 +1,37 @@
-import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  onSnapshot,
+  orderBy,
+  query,
+} from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { Table, Button, Container, Row, Stack, Spinner } from "react-bootstrap";
+import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { db } from "../../firebase.config";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
-  const [show, setShow] = useState(false);
-  const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
   const isUserDataEmpty = users.length === 0;
   const navigate = useNavigate();
 
   useEffect(() => {
     setLoading(true);
-    const unsub = onSnapshot(
-      collection(db, "Renting"),
-      (snapshot) => {
-        let list = [];
-        snapshot.docs.forEach((doc) => {
-          list.push({ id: doc.id, ...doc.data() });
-        });
-        setUsers(list.reverse());
-        setLoading(false);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    const rentingRef = collection(db, "Renting");
+    const q = query(rentingRef, orderBy("timestamp", "desc"));
 
-    return () => {
-      unsub();
-    };
+    onSnapshot(q, (snapshot) => {
+      const rentingData = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+      setUsers(rentingData);
+      setLoading(false);
+    });
   }, []);
 
   if (loading) {
@@ -43,20 +42,15 @@ const Users = () => {
     );
   }
 
-  const modalToggle = (item) => {
-    setShow(true);
-    setUserData(item);
-  };
-
   const handleDeleteUser = async (id) => {
     try {
       if (window.confirm("Are you sure do you want to delete this user ?")) {
         await deleteDoc(doc(db, "Renting", id));
         setUsers(users.filter((user) => user.id !== id));
-        alert("Successfully deleted user!");
+        toast.success("Successfully deleted user!");
       }
     } catch {
-      alert("Failed to delete user!");
+      toast.warn("Failed to delete user!");
     }
   };
 
