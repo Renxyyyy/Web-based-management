@@ -31,7 +31,6 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
     });
     e.preventDefault();
     handleCloseModal();
-    console.log(formInput);
     setFormInput({
       name: "",
       phoneNumber: 0,
@@ -41,8 +40,6 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
       paymentMethod: "",
       currentDate: "",
     });
-
-    console.log(formInput);
   };
   const currentDate = new Date(Date.now()).toDateString();
   return (

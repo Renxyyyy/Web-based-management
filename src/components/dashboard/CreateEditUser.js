@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
 
 const initialState = {
   Lastname: "",
@@ -30,7 +31,6 @@ const CreateEditUser = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
-  const [user] = useAuthState(auth);
 
   useEffect(() => {
     id && getSingleUser();
@@ -122,10 +122,10 @@ const CreateEditUser = () => {
           ...data,
           timestamp: serverTimestamp(),
         });
-        alert("Successfully added user");
-        navigate("/");
+        toast.success("Successfully added user");
+        navigate(-1);
       } catch (error) {
-        console.log(error);
+        toast.error(error.message);
       }
     } else {
       try {
@@ -133,10 +133,10 @@ const CreateEditUser = () => {
           ...data,
           timestamp: serverTimestamp(),
         });
-        alert("Successfully updated user");
-        navigate("/");
+        toast.success("Successfully updated user");
+        navigate(-1);
       } catch (error) {
-        console.log(error);
+        toast.error(error.message);
       }
     }
   };

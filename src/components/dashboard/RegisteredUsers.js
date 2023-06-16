@@ -1,7 +1,6 @@
 import { collection, onSnapshot } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
-import { Table, Container, Row, Stack, Spinner } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Table, Container, Row, Spinner } from "react-bootstrap";
 import "react-toastify/dist/ReactToastify.css";
 import { db } from "../../firebase.config";
 
