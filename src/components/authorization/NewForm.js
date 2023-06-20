@@ -7,11 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import "./Form.css";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
+import { HiOutlineEyeOff, HiOutlineEye } from "react-icons/hi";
 
 const NewForm = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
@@ -35,6 +37,10 @@ const NewForm = () => {
     } catch (error) {
       toast.error(error.message);
     }
+  };
+
+  const handleShowPassword = () => {
+    setShowPassword(!showPassword);
   };
   return (
     <div className="Form">
@@ -80,18 +86,49 @@ const NewForm = () => {
               onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group
+            style={{ position: "relative" }}
+            className="mb-3"
+            controlId="formBasicEmail"
+          >
             <Form.Label>Password</Form.Label>
             <Form.Control
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Enter your password..."
               onChange={(e) => setPassword(e.target.value)}
             />
+            {showPassword ? (
+              <HiOutlineEye
+                onClick={handleShowPassword}
+                color="black"
+                size={22}
+                style={{
+                  position: "absolute",
+                  top: 38,
+                  right: 10,
+                  cursor: "pointer",
+                  display: password.length > 0 ? "block" : "none",
+                }}
+              />
+            ) : (
+              <HiOutlineEyeOff
+                onClick={handleShowPassword}
+                color="black"
+                size={22}
+                style={{
+                  position: "absolute",
+                  top: 38,
+                  right: 10,
+                  cursor: "pointer",
+                  display: password.length > 0 ? "block" : "none",
+                }}
+              />
+            )}
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Confirm Password</Form.Label>
             <Form.Control
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="Confirm your password..."
               onChange={(e) => setConfirmPassword(e.target.value)}
             />

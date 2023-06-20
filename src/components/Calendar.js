@@ -47,6 +47,10 @@ const Calendar = () => {
     });
   };
 
+  const handleSelectDate = (arg) => {
+    console.log(arg.event.title);
+    console.log(arg.event.extendedProps.currentDate);
+  };
   if (isLoading) {
     return (
       <div className="d-flex justify-content-center">
@@ -73,10 +77,10 @@ const Calendar = () => {
           plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
           initialView="dayGridMonth"
           height={"90vh"}
-          eventClick={(clickInfo) => console.log(clickInfo)}
           editable={true}
           selectable={true}
           selectMirror={true}
+          eventClick={handleSelectDate}
           dayMaxEvents={false}
           events={events}
           weekends={true}
