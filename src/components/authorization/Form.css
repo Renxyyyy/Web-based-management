@@ -1,7 +1,6 @@
 .Form {
-  background-color: green center
-    center/cover no-repeat;
-  height: 50rem;
+  background-color: green center center/cover no-repeat;
+  height: 100%;
 }
 .newform {
   background-color: rgb(40, 40, 40);
@@ -15,15 +14,20 @@
   font-size: 2.3rem;
   padding-bottom: 1.4rem;
 }
+
 .newbtn {
-  background: linear-gradient(90deg, rgb(97,131,98) 0%, rgb(0, 153, 51) 100%);
+  background: linear-gradient(90deg, rgb(97, 131, 98) 0%, rgb(0, 153, 51) 100%);
   border-radius: 2px;
   border: none !important;
   outline: none !important;
   transition: all 0.4s ease-out;
 }
 .newbtn:hover {
-  background: linear-gradient(90deg, rgb(97,131,98) 0%, rgb(128,255,0) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(97, 131, 98) 0%,
+    rgb(128, 255, 0) 100%
+  );
 }
 .form-container {
   margin: 100px auto;
@@ -119,7 +123,11 @@
   height: 50px;
   margin-top: 90px;
   border-radius: 2px;
-  background: linear-gradient(90deg, rgb(97,131,98) 0%, rgb(227, 37, 37) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(97, 131, 98) 0%,
+    rgb(227, 37, 37) 100%
+  );
   outline: none;
   border: none;
   color: #fff;
@@ -128,7 +136,11 @@
 
 .form-input-btn:hover {
   cursor: pointer;
-  background: linear-gradient(90deg, rgb(97,131,98) 0%, rgb(220, 53, 53) 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(97, 131, 98) 0%,
+    rgb(220, 53, 53) 100%
+  );
   transition: all 0.4s ease-out;
 }
 
