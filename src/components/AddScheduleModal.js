@@ -5,11 +5,11 @@ import "./AddSchedule.css";
 import Datetime from "react-datetime";
 import "react-datetime/css/react-datetime.css";
 import moment from "moment";
+import { toast } from "react-toastify";
 import { db } from "../firebase.config";
 
 const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
   const [formInput, setFormInput] = useState({
-    id: Math.floor(Math.random() * new Date(Date.now()) * 4),
     name: "",
     phoneNumber: 0,
     title: "",
@@ -30,7 +30,6 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
     const end = moment(formInput.end).format();
     const schedulesDataRef = collection(db, "SchedulesData");
     addDoc(schedulesDataRef, {
-      id: formInput.id,
       name: formInput.name,
       phoneNumber: formInput.phoneNumber,
       title: formInput.title,
@@ -40,7 +39,6 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
       currentDate: formInput.currentDate,
     });
     handleAddEvent({
-      id: formInput.id,
       title,
       start,
       end,
@@ -55,6 +53,7 @@ const AddScheduleModal = ({ showModal, handleCloseModal, handleAddEvent }) => {
       currentDate: "",
     });
     handleCloseModal();
+    toast.success("Successfully added schedule");
   };
   const currentDate = new Date(Date.now()).toDateString();
   return (

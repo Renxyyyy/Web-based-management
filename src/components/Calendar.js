@@ -5,7 +5,7 @@ import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import "./Calendar.css";
 import AddScheduleModal from "./AddScheduleModal";
-import { collection, onSnapshot } from "firebase/firestore";
+import { collection, doc, onSnapshot, setDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { Button, Spinner } from "react-bootstrap";
 import moment from "moment";
@@ -14,12 +14,12 @@ const Calendar = () => {
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [events, setEvents] = useState([]);
+  const schedulesDataRef = collection(db, "SchedulesData");
+
   const calendarRef = useRef(null);
 
   useEffect(() => {
     setIsLoading(true);
-    const schedulesDataRef = collection(db, "SchedulesData");
-
     onSnapshot(schedulesDataRef, (snapshot) => {
       const schedulesData = snapshot.docs.map((doc) => ({
         id: doc.id,
@@ -47,10 +47,6 @@ const Calendar = () => {
     });
   };
 
-  const handleSelectDate = (arg) => {
-    console.log(arg.event.title);
-    console.log(arg.event.extendedProps.currentDate);
-  };
   if (isLoading) {
     return (
       <div className="d-flex justify-content-center">
@@ -77,10 +73,8 @@ const Calendar = () => {
           plugins={[dayGridPlugin, interactionPlugin, listPlugin]}
           initialView="dayGridMonth"
           height={"90vh"}
-          editable={true}
           selectable={true}
           selectMirror={true}
-          eventClick={handleSelectDate}
           dayMaxEvents={false}
           events={events}
           weekends={true}
