@@ -14,10 +14,9 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h3>About Us</h3>
-            <Link to='/sign-up'>Sign up</Link>
             <Link to='/about'>Home Owners Officers</Link>
             <Link to='/about'>About Rizal Village</Link>
-            <Link to='/directory'>Direction</Link>
+            <Link to='/about'>Direction</Link>
           </div>
           <div class='footer-link-items'>
             <h3>Contact Us</h3>

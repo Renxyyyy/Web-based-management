@@ -23,7 +23,7 @@ const TestNavbar = () => {
     <div>
       <Navbar className="navbar" expand="lg">
         <Container>
-          <Navbar.Brand href="#home" className="d-1 text-white pr-5">
+          <Navbar.Brand href="#home" className="d-1 text-white pr-5" onClick={() => navigate("/")}>
             Rizal Village <i class="fas fa-home" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
